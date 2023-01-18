@@ -10,8 +10,8 @@
     <table class="table">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Languages</th>
+          <th>Nom</th>
+          <th>Langue</th>
           <th>Currencies</th>
           <th>Map</th>
         </tr>
