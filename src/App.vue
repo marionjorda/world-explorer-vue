@@ -88,6 +88,7 @@ export default {
       targetComponent: "",
       targetCountry: null,
       targetCurrency: "",
+      roadType: "",
     };
   },
   methods: {
@@ -102,6 +103,9 @@ export default {
     },
     updateBaseCurrency(newCurrency) {
       this.baseCurrency = newCurrency;
+    },
+    updateLocalRoadType(newRoad){
+      this.roadType = newRoad;
     },
     openFlag: function (country) {
       this.targetCountry = country;
@@ -136,8 +140,11 @@ export default {
 
       switch (this.targetComponent) {
         case "CountryFlag":
+          props.country = this.targetCountry;
+          break;
         case "CountryMap":
           props.country = this.targetCountry;
+          props.roadType = this.roadType;
           break;
         case "CountryExchangeRate":
           props.country = this.targetCountry;
@@ -157,6 +164,9 @@ export default {
         return {
           currencyChange: this.updateTargetCurrency,
           baseCurrencyChange: this.updateBaseCurrency,
+        }
+        else if (this.targetComponent === "CountryMap") return {
+          updateRoadType: this.updateLocalRoadType,
         };
 
       return {};

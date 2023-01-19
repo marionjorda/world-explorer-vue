@@ -1,5 +1,5 @@
 <template>
-  <embedded-map :query="mapQuery" :zoom="areaZoom"></embedded-map>
+  <embedded-map :query="mapQuery" :zoom="areaZoom" :road-type="roadType" @changeRoadType="updateRoadType"></embedded-map>
 </template>
 <script>
 import EmbeddedMap from "./EmbeddedMap.vue";
@@ -11,6 +11,10 @@ export default {
     country: {
       type: Object,
       default: null,
+    },
+    roadType: {
+      type : String,
+      default: "",
     },
   },
   computed: {
@@ -33,6 +37,10 @@ export default {
       return 9;
     },
   },
-  methods: {},
+  methods: {
+    updateRoadType: function (newType) {
+      this.$emit("updateRoadType", newType);
+    }
+  },
 };
 </script>
