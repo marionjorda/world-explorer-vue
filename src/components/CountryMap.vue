@@ -1,5 +1,6 @@
 <template>
-  <embedded-map :query="mapQuery" :zoom="areaZoom" :road-type="roadType" @changeRoadType="updateRoadType"></embedded-map>
+  <embedded-map :query="mapQuery" :zoom="areaZoom" :road-type="roadType" 
+    @changeRoadType="updateRoadType"></embedded-map>
 </template>
 <script>
 import EmbeddedMap from "./EmbeddedMap.vue";

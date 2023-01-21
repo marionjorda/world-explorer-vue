@@ -36,7 +36,7 @@
                 <button
                   class="button is-ghost"
                   @click="openExchangeRate(country, key)"
-                >
+                  >
                   {{ key }}
                 </button>
               </li>
