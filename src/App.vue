@@ -7,6 +7,10 @@
       :selectedCurrency="baseCurrency"
       @currencyChange="updateBaseCurrency"
     ></currency-selector>
+    <select v-model="selectRoad">
+      <option value="">Carte Routière</option>
+      <option value="k">Satellite</option>
+    </select>
     <table class="table">
       <thead>
         <tr>
