@@ -15,7 +15,7 @@
       <thead>
         <tr>
           <th>Name</th>
-          <th>Language</th>
+          <th>Languag</th>
           <th>Currencies</th>
           <th>Map</th>
         </tr>
